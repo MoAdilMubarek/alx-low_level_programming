@@ -2,8 +2,8 @@
 
 /**
  * main - check the code.
- * Description: A function that prints 10 times the alphabet, in lowercase.
- *  followed by a new line
+ * Description: A function that prints 10 times the alphabet from a-z
+ * , in lowercase followed by a new line
  * Return: Always 0.
 */
 
