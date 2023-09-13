@@ -1,8 +1,8 @@
-#include "mainc.h"
+#include "main.h"
 
 /**
  * _isalpha checks if character  is alphabet
- * @c: Takes  input
+ * @c: Takes  input from other functions.
  * Return: 1 if c is character, otherwise
 */
 
