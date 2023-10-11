@@ -2,7 +2,7 @@
 
 /**
  * _isalpha checks if character  is alphabet
- * Description: checks if char is alphabet
+ * Description: A function that checks if char is alphabet
  * @c: Takes  input from other functions.
  * Return: 1 if c is character, otherwise
 */
