@@ -3,7 +3,9 @@
     void print_triangle(int size)
     {
         int hi, wid, j;
-        
+
+        if (size <= 0)
+            print('\n');
         for (hi = 1; hi <= size; hi++)
         {
             for (j = hi; j <= size; j++)
