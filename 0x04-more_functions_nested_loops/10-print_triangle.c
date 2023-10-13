@@ -8,7 +8,8 @@
         {
             for (j = hi; j <= size; j++)
             {
-                _putchar('  ');
+                _putchar(' ');
+                _putchar(' ');
             }   
             for (wid = 1; wid <= hi; wid++)
             {
