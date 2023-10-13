@@ -8,12 +8,12 @@
         {
             for (j = hi; j <= size; j++)
             {
-                putchar(' ');
+                _putchar(' ');
             }   
             for (wid = 1; wid <= hi; wid++)
             {
-                putchar('#');
+                _putchar('#');
             }
-            putchar('\n');
+            _putchar('\n');
         }
     }
