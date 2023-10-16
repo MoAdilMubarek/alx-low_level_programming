@@ -16,11 +16,11 @@ void rev_string(char *s)
 
 	i--;
 
-	for (j = 0; j <= i / 2; j++, i--)
+	for (j = 0; j <= i / 2; j++)
 	{
-		t = s[i];
-		s[i] = s[j];
-		s[j] = t;
+		t = s[j];
+		s[j] = s[i - j - 1];
+		s[i - j - 1] = t;
 	}
 }
 
