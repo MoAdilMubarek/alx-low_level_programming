@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * main - check the code
- * Description: A program that prints _putchar, followed by a new line  
+ * main - prints strings
+ * Description: A program that prints _putchar, followed by a new line
  * Return: Always 0.
 */
 
-int main() 
+int main(void)
 {
 	char str[] = "_putchar";
 	int ch;

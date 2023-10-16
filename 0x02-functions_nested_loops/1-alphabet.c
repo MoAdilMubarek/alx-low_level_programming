@@ -2,9 +2,8 @@
 
 
 /**
- * main - check the code
- * Description: A function that prints the alphabet, 
-   in lowercase, followed by a new line
+ * print_alphabet - prints alphabet
+ * Description: A function that prints alphabet
  * Return: Always 0.
  */
 
@@ -12,7 +11,7 @@ void print_alphabet(void)
 {
 	int i;
 
-        for (i = 'a'; i  <= 'z'; i++)
+	for (i = 'a'; i  <= 'z'; i++)
 	{
 		_putchar(i);
 	}

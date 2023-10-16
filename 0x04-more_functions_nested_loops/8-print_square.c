@@ -8,11 +8,11 @@
 
 void print_square(int size)
 {
-	int hi, wid;
+	int row, col;
 
-	for (hi = 1; hi <= size; hi++)
+	for (row = 1; row <= size; row++)
 	{
-		for (wid = 1; wid <= size; wid++)
+		for (col = 1; col <= size; col++)
 			_putchar('#');
 		_putchar('\n');
 	}
