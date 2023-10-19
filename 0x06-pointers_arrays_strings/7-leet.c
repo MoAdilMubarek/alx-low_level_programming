@@ -17,9 +17,9 @@ char *leet(char *c)
 		for (n = 0; str[n] != '\0'; n++)
 		{
 			if (c[i] == str[n])
+			{
 				c[i] = value[n];
-			else
-				continue;
+			}
 		}
 
 		return (c);
