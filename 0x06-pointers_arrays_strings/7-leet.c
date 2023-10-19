@@ -18,9 +18,8 @@ char *leet(char *c)
 		{
 			if (c[i] == str[n])
 			{
-				c[i] = value[n];
+				*c = value[n] + 48;
 			}
 		}
 
-		return (c);
 }
