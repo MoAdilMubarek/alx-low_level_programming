@@ -17,7 +17,7 @@ char *cap_string(char *str)
 	{
 		int n;
 
-		for (n = 0; n < 12; n++)
+		for (n = 0; del[n] != '\0'; n++)
 		{
 			if (str[i] == del[n] && str[i + 1] == 32)
 				str[i + 2] -= 32;
