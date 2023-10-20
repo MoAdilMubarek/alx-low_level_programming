@@ -10,7 +10,7 @@ char *leet(char *c)
 {
 	char str[] = {'A', 'a', 'E', 'e', 'O', 'o', 'T', 't', 'L', 'l'};
 	int value[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
-	int n, i;
+	int n;
 
 	while (*c)
 	{
