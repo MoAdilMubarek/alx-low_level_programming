@@ -9,17 +9,17 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-		while (*haystack)
+	while (*haystack)
+	{
+		if (*needle == *haystack)
 		{
-			if (*needle == *haystack)
-			{
-				return (haystack);
-			}
-			else
-			{
-				haystack++;
-			}
+			return (haystack);
 		}
+		else
+		{
+			haystack++;
+		}
+	}
 
 }
 
