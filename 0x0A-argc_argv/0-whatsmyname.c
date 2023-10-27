@@ -3,7 +3,7 @@
 /**
  * main - prints its name, followed by a new line
  * @argc: int
- * @argv: arry
+ * @argv: array of string
  * return: 0
  */
 
