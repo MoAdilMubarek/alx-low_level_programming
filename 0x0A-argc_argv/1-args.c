@@ -7,10 +7,10 @@
  * return: 0
  */
 
-int main(int args, char *argv[])
+int main(int argc, char *argv[] __attribute__((unused)))
 {
 	(void)argv;
-	printf("%d\n", args - 1);
+	printf("%d\n", argc - 1);
 
 	return (0);
 }
