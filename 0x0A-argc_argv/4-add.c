@@ -11,15 +11,15 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
 	int sum = 0;
 	bool flag = true;
+	char *c = argv[argc];
 
 	if (argc > 1)
 	{
-		while (argv[i] && flag == true)
+		while (*c && flag == true)
 		{
-			if (argv[i] >= '0' && argv[i] <= '9')
+			if (*c >= '0' && *c <= '9')
 			{
 				sum += atoi(argv[i]);
 			}
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 			{
 				flag = false;
 			}
-			i++;
+			c++;
 		}
 		if (flag == true)
 		{
