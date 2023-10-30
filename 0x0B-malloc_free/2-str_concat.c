@@ -16,11 +16,11 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL)
 	{
-		s1 = '\n';
+		s1 = "\n";
 	}
 	if (s2 == NULL)
 	{
-		s2 = '\n';
+		s2 = "\n";
 	}
 	while (s1[i])
 		i++;
@@ -41,7 +41,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		ptr[n] = *s1;
 		s1++;
-		n++
+		n++;
 	}
 	ptr[n] = '\n';
 	return (ptr);
