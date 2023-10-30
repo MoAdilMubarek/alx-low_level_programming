@@ -28,12 +28,13 @@ char *str_concat(char *s1, char *s2)
 	while (s2[j])
 		j++;
 
-	while (j--)
+	while (*s2)
 	{
-		s1[i] = s2[n];
-		n++;
+		s1[i] = *s2;
+		s2++;
+		i++;
 	}
-	n = 0;
+
 
 	ptr = (char *)malloc(i + j + 1);
 
