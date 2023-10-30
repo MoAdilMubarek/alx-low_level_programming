@@ -30,21 +30,14 @@ char *str_concat(char *s1, char *s2)
 
 	size = i + j + 1;
 
-	while (*s2)
+	ptr = (char *)malloc(size);
+
+	while (n < size)
 	{
-		s1[i] = *s2;
-		s2++;
-		i++;
-	}
-	s1[i] = '\0';
-
-
-	ptr = (char *)malloc(i + j + 1);
-
-	while (n <= size)
-	{
-		ptr[n] = *s1;
-		s1++;
+		if (n < i)
+			ptr[n] = s1[n];
+		else
+			ptr[n] = s2[n - i];
 		n++;
 	}
 	ptr[n] = '\0';
