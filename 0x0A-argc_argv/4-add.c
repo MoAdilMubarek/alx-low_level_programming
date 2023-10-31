@@ -12,40 +12,27 @@
 int main(int argc, char *argv[])
 {
 	int sum = 0;
-	bool flag = true;
 	char *c = argv[argc];
 
 	if (argc > 1)
 	{
-		while (*c && flag == true)
+		while (--argc)
 		{
 			if (*c >= '0' && *c <= '9')
 			{
-				sum += atoi(argv[i]);
+				sum += atoi(argv[argc]);
+				c++;
 			}
 			else
 			{
-				flag = false;
+				printf("Error\n");
+				return (1);
 			}
-			c++;
 		}
-		if (flag == true)
-		{
-			printf("%d\n", sum);
-		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
-
+		printf("%d\n", sum);
 	}
 	else
-	{
 		printf("%d\n", 0);
-	}
-
-	return (0);
 }
 
 
