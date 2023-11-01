@@ -4,7 +4,7 @@
  * main - prints the number of arguments passed into it.
  * @argc: int
  * @argv: list
- * return: 0
+ * Return: 0
  */
 
 int main(int argc, char *argv[] __attribute__((unused)))

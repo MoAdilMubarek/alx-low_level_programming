@@ -4,7 +4,7 @@
  * main - prints all arguments it receives.
  * @argc: int parameter
  * @argv: pointer to array
- * return: 0
+ * Return: 0
  */
 
 int main(int argc, char *argv[])
@@ -18,5 +18,5 @@ int main(int argc, char *argv[])
 		i++;
 	}
 
-	return(0);
+	return (0);
 }
