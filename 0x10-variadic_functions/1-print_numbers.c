@@ -20,8 +20,6 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		printf("%d", j);
 		if (*separator && i + 1 < n)
 			printf("%c ", *separator);
-		else if (i + 1 < n)
-			printf(" ");
 	}
 	printf("\n");
 }
