@@ -10,6 +10,7 @@ size_t print_list(const list_t *h)
 {
 	int i = 0;
 	size_t size = 0;
+	char *ptr = h->str;
 
 	if (h->str == NULL)
 	{
@@ -19,10 +20,10 @@ size_t print_list(const list_t *h)
 	{
 		while (h)
 		{
-			while (*(h->str))
+			while (*ptr)
 			{
 				i++;
-				(h->str)++;
+				ptr++;
 			}
 			printf("[%d] %s\n", i, h->str);
 			size++;
