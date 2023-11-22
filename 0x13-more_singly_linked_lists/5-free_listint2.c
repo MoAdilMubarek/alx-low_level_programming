@@ -10,6 +10,7 @@ void free_listint2(listint_t **head)
 {
 	listint_t *current;
 	listint_t *next;
+
 	if (!head || !*head)
 	{
 		return;
