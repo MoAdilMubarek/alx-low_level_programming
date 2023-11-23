@@ -8,20 +8,12 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int j, i = 0;
-	unsigned int sum;
-	const char *p;
+	unsigned int sum = 0;
 
-	p = b;
-
-	while (p[i])
+	while (*b)
 	{
-		i++;
-	}
-
-	for (j = i - 1; j >= 0; j--)
-	{
-		sum = *b * (2 ** j);
+		sum <<= 1;
+		sum += (*b - '0');
 		b++;
 	}
 
