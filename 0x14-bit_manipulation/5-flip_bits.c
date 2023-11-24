@@ -15,7 +15,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	for (i = 31; i >= 0; i--)
 	{
-		if (rox & (1UL << i))
+		if (xor & (1UL << i))
 			diff++;
 	}
 
