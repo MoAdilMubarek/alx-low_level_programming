@@ -10,20 +10,18 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int file_descriptor;
-	char buff[100];
+	size_t readed_chars;
+	char buff[250];
 
-	if (*filename == NULL)
+	if (filename == NULL)
 		return (0);
 
-	file_descriptor = open(filename, 0_RDWR);
-	if (file_descritor < 0)
+	file_descriptor = open(filename, 4);
+	if (file_descriptor < 0)
 		return (0);
 
-	ssize_t readed_chars = read(fie_descriptor, buff, letters);
-	if (readed_chars != letters)
-		return (0);
-
-	printf("%s", buff);
+	readed_chars = read(file_descriptor, &buff[0], letters);
+	write(1, &buff[0], readed_chars);
 
 	close(file_descriptor);
 
