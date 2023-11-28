@@ -26,12 +26,10 @@ int append_text_to_file(const char *filename, char *text_content)
 			size++;
 
 		bytes = write(des, text_content, size);
-
-		return (size == bytes? 1 : -1);
 	}
 
 	close(des);
-
+	return (size == bytes? 1 : -1);
 }
 
 
