@@ -12,7 +12,10 @@ int create_file(const char *filename, char *text_content)
 	int des;
 	ssize_t bytes, size = 0;
 
-	if (!text_content)
+	if (filename == NULL)
+		return (-1);
+
+	if (text_content == NULL)
 		size = 0;
 	else
 	{
@@ -20,7 +23,7 @@ int create_file(const char *filename, char *text_content)
 			size++;
 	}
 
-	des = open(filename, O_WRONLY | O_CREAT, S_IRUSR, S_IWUSR);
+	des = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR, S_IWUSR);
 	if (des < 0)
 		return (-1);
 
