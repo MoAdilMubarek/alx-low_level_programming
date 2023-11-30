@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
 	char *source_file, *dest_file, *err97, *err98, *err99, *err100;
 	int des_1, des_2, i = 0;
-	char buff[1025];
+	char buff[1024];
 	ssize_t readed_bytes, written_bytes;
 
 	if (argc != 3)
@@ -59,7 +59,15 @@ int main(int argc, char *argv[])
 		write(2, err99, i);
 		exit(99);
 	}
-	if (close(des_1) == -1 || close(des_2) == -1)
+	if (close(des_1) == -1)
+	{
+		err100 = "Error: Can't close fd FD_VALUE\n";
+		while (*err100++)
+			i++;
+		write(2, err100, i);
+		exit(100);
+	}
+	if (close(des_2) == -1)
 	{
 		err100 = "Error: Can't close fd FD_VALUE\n";
 		while (*err100++)
