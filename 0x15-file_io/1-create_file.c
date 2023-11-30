@@ -23,7 +23,7 @@ int create_file(const char *filename, char *text_content)
 			size++;
 	}
 
-	des = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR, S_IWUSR);
+	des = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 	if (des < 0)
 		return (-1);
 
