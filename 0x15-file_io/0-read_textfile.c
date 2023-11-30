@@ -10,13 +10,13 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int file_descriptor;
-	size_t readed_chars;
+	int readed_chars, written_chars;
 	char buff[250];
 
 	if (filename == NULL)
 		return (0);
 
-	file_descriptor = open(filename, 4);
+	file_descriptor = open(filename, O_RDONLY);
 	if (file_descriptor < 0)
 		return (0);
 
@@ -24,7 +24,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (readed_chars == -1)
 		return (0);
 
-	write(1, &buff[0], readed_chars);
+	written_chars = write(1, &buff[0], readed_chars);
+	if (written_chars == -1 || written_chars != readed_chars)
+		return (0);
 
 	close(file_descriptor);
 

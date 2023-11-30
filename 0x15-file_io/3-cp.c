@@ -9,7 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-	char *err97, *err98, *err99, *err100;
+	char *source_file, *dest_file, *err97, *err98, *err99, *err100;
 	int des_1, des_2;
 	char buff[1024];
 	ssize_t readed_bytes, written_bytes;
@@ -21,7 +21,8 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 
-	des_1 = open(argv[1], O_RDONLY);
+	source_file = argv[1];
+	des_1 = open(source_file, O_RDONLY);
 	if (des_1 == -1)
 	{
 		err98 = "Error: Can't read from file NAME_OF_THE_FILE\n";
@@ -29,7 +30,8 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	des_2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR,
+	dest_file = argv[2];
+	des_2 = open(dest_file, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR,
 	S_IRGRP | S_IWGRP, S_IROTH);
 
 	while ((readed_bytes = read(des_1, buff, sizeof(buff))) > 0)
